@@ -79,7 +79,9 @@ public class CheckCriterea {
 				if(Excel_region.equals(region) && Excel_country.equals(country) && Excel_state.equals(state) && Excel_category.equals(category))
 				{
 					Excel_List = cellToString(row.getCell(listHeaderIndex));
+					
 					result =Excel_List;
+					System.out.println("List op opening :-"+ result);
 				}
 			}
 
