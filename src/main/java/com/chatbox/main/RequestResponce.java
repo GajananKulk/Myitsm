@@ -11,7 +11,8 @@ import javax.ws.rs.core.Response;
 
 import org.codehaus.jackson.map.ObjectMapper;
 
-import com.chatbox.bussiness.*;
+import com.chatbox.bussiness.CheckCriterea;
+import com.chatbox.bussiness.API_AI_Responce;
 import com.chatbox.model.API_AI_Response_Mdl;
 import com.chatbox.model.Country;
 import com.chatbox.model.Parameters;
@@ -27,7 +28,6 @@ public class RequestResponce {
 	@GET
 	public Response getMsg() {
 		return Response.status(200).entity("Welcome User...!").build();
-
 
 	}
 

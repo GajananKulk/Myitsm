@@ -12,7 +12,7 @@ import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.DateUtil;
 public class CheckCriterea {
-	public String checkCriterea(String post, String degree, String experience,String tool) throws IOException{
+	public String checkCriterea(String region, String country, String state,String category) throws IOException{
 			String Excel_region= "";
 			String Excel_country="";
 			String Excel_state ="";
@@ -24,7 +24,7 @@ public class CheckCriterea {
 			//FileInputStream stream=null;
 			HSSFRow row = null;
 			//InputStream stream =null;
-			InputStream stream = RoomBooking.class.getResourceAsStream("ConferenceRoomBooking.xls");
+			InputStream stream = CheckCriterea.class.getResourceAsStream("ConferenceRoomBooking.xls");
 			try
 			{
 				/*File excel = new File("D:\\FlexRecruiter.xls");
@@ -83,8 +83,7 @@ public class CheckCriterea {
 				}
 			}
 
-			return result;
-		}
+			
 		
 		/*if(degree.toUpperCase() == "BE" || degree.toUpperCase()=="B.Teck" || degree.toUpperCase()=="ME" || degree.toUpperCase()=="M.Teck" || degree.toUpperCase()=="MCA"){
 			int t=Integer.parseInt(experience);
@@ -108,6 +107,46 @@ public class CheckCriterea {
 
 		return result;
 	}
+	
+	
+	
+	public static String cellToString(HSSFCell cell) {
+		int type;
+		Object result = null;
+		type = cell.getCellType();
+		String date="";
+		switch (type) {
+		case HSSFCell.CELL_TYPE_NUMERIC:
+			//if(!cell.getDateCellValue().toString().contains(":")){
+			if (DateUtil.isCellDateFormatted(cell)) {
+				SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+				date = sdf.format(cell.getDateCellValue());
+				System.out.println(date.toString());
+
+			}else {
+				result = Integer.valueOf((int) cell.getNumericCellValue())
+						.toString();
+			}
+			break;
+		case HSSFCell.CELL_TYPE_STRING:
+			result = cell.getStringCellValue();
+			break;
+
+		case HSSFCell.CELL_TYPE_BLANK:
+			result = "";
+			break;
+
+		case HSSFCell.CELL_TYPE_FORMULA:
+			result = cell.getCellFormula();
+		}
+		return result.toString();
+	}
+
+	
+	
+	
+	
+	
 	/*public static String send(String post)throws IOException
 	{
 		String excel_post= "";
@@ -170,37 +209,6 @@ public class CheckCriterea {
 		return result;
 	}
 */
-	public static String cellToString(HSSFCell cell) {
-		int type;
-		Object result = null;
-		type = cell.getCellType();
-		String date="";
-		switch (type) {
-		case HSSFCell.CELL_TYPE_NUMERIC:
-			//if(!cell.getDateCellValue().toString().contains(":")){
-			if (DateUtil.isCellDateFormatted(cell)) {
-				SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
-				date = sdf.format(cell.getDateCellValue());
-				System.out.println(date.toString());
-
-			}else {
-				result = Integer.valueOf((int) cell.getNumericCellValue())
-						.toString();
-			}
-			break;
-		case HSSFCell.CELL_TYPE_STRING:
-			result = cell.getStringCellValue();
-			break;
-
-		case HSSFCell.CELL_TYPE_BLANK:
-			result = "";
-			break;
-
-		case HSSFCell.CELL_TYPE_FORMULA:
-			result = cell.getCellFormula();
-		}
-		return result.toString();
-	}
-
+	
 
 }
