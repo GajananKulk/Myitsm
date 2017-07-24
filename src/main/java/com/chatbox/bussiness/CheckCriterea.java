@@ -12,7 +12,7 @@ import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.DateUtil;
 public class CheckCriterea {
-	public static String Checkcriterea(String post, String degree, String experience,String tool) throws IOException{
+	public String checkCriterea(String post, String degree, String experience,String tool) throws IOException{
 		String result= "";
 		if(degree.toUpperCase() == "BE" || degree.toUpperCase()=="B.Teck" || degree.toUpperCase()=="ME" || degree.toUpperCase()=="M.Teck" || degree.toUpperCase()=="MCA"){
 			int t=Integer.parseInt(experience);

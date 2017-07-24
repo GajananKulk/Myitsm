@@ -46,8 +46,14 @@ public class RequestResponce {
 		Parameters params=rs.getParameters();
 
 		Parameters p=rs.getParameters();
+		String post=p.getPost();
+		String degree=p.getDegree();
+		String experience=p.getExperience();
+		String tool=p.getTool();
 		
-		String str1 ="";
+		CheckCriterea cc=new CheckCriterea();
+	    
+		String str1 =cc.checkCriterea(post, degree, experience, tool);
 		/*p.setStarttime(null);
 		p.setEndtime(null);
 		
