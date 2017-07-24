@@ -1,84 +1,132 @@
 package com.chatbox.model;
 
-//import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 
-//@JsonIgnoreProperties(ignoreUnknown = true)
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Parameters {
-	 private String region;
+	private String region;
 
-	    private String fullparttime;
+    private String fullparttime;
 
-	    private String jobtype;
+    private String job_category;
 
-	    private State state;
+    private String post;
 
-	    private String jobcategory;
+    private String jobtype;
 
-	    private Country country;
+    private String degree;
 
-	    public String getRegion ()
-	    {
-	        return region;
-	    }
+    private String tool;
 
-	    public void setRegion (String region)
-	    {
-	        this.region = region;
-	    }
+    private State state;
 
-	    public String getFullparttime ()
-	    {
-	        return fullparttime;
-	    }
+    private String experience;
 
-	    public void setFullparttime (String fullparttime)
-	    {
-	        this.fullparttime = fullparttime;
-	    }
+    private Country country;
 
-	    public String getJobtype ()
-	    {
-	        return jobtype;
-	    }
+    public String getRegion ()
+    {
+        return region;
+    }
 
-	    public void setJobtype (String jobtype)
-	    {
-	        this.jobtype = jobtype;
-	    }
+    public void setRegion (String region)
+    {
+        this.region = region;
+    }
 
-	    public State getState ()
-	    {
-	        return state;
-	    }
+    public String getFullparttime ()
+    {
+        return fullparttime;
+    }
 
-	    public void setState (State state)
-	    {
-	        this.state = state;
-	    }
+    public void setFullparttime (String fullparttime)
+    {
+        this.fullparttime = fullparttime;
+    }
 
-	    public String getJobcategory ()
-	    {
-	        return jobcategory;
-	    }
+    public String getJob_category ()
+    {
+        return job_category;
+    }
 
-	    public void setJobcategory (String jobcategory)
-	    {
-	        this.jobcategory = jobcategory;
-	    }
+    public void setJob_category (String job_category)
+    {
+        this.job_category = job_category;
+    }
 
-	    public Country getCountry ()
-	    {
-	        return country;
-	    }
+    public String getPost ()
+    {
+        return post;
+    }
 
-	    public void setCountry (Country country)
-	    {
-	        this.country = country;
-	    }
+    public void setPost (String post)
+    {
+        this.post = post;
+    }
 
-	    @Override
-	    public String toString()
-	    {
-	        return "ClassPojo [region = "+region+", fullparttime = "+fullparttime+", jobtype = "+jobtype+", state = "+state+", jobcategory = "+jobcategory+", country = "+country+"]";
-	    }
+    public String getJobtype ()
+    {
+        return jobtype;
+    }
+
+    public void setJobtype (String jobtype)
+    {
+        this.jobtype = jobtype;
+    }
+
+    public String getDegree ()
+    {
+        return degree;
+    }
+
+    public void setDegree (String degree)
+    {
+        this.degree = degree;
+    }
+
+    public String getTool ()
+    {
+        return tool;
+    }
+
+    public void setTool (String tool)
+    {
+        this.tool = tool;
+    }
+
+    public State getState ()
+    {
+        return state;
+    }
+
+    public void setState (State state)
+    {
+        this.state = state;
+    }
+
+    public String getExperience ()
+    {
+        return experience;
+    }
+
+    public void setExperience (String experience)
+    {
+        this.experience = experience;
+    }
+
+    public Country getCountry ()
+    {
+        return country;
+    }
+
+    public void setCountry (Country country)
+    {
+        this.country = country;
+    }
+
+    @Override
+    public String toString()
+    {
+        return "ClassPojo [region = "+region+", fullparttime = "+fullparttime+", job_category = "+job_category+", post = "+post+", jobtype = "+jobtype+", degree = "+degree+", tool = "+tool+", state = "+state+", experience = "+experience+", country = "+country+"]";
+    }
 }
