@@ -35,7 +35,7 @@ public class CheckCriterea {
 				e.printStackTrace();
 			}
 
-			HSSFSheet ws = wb.getSheetAt(1);
+			HSSFSheet ws = wb.getSheetAt(0);
 			int rowNum = ws.getLastRowNum();
 			int colNum = ws.getRow(1).getLastCellNum();
 			int regionHeaderIndex = -1, countryHeaderIndex = -1,stateHeaderIndex=0, categoryHeaderIndex =0, listHeaderIndex=0;
