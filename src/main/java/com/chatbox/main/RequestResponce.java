@@ -24,7 +24,7 @@ public class RequestResponce {
 
 	@GET
 	public Response getMsg() {
-		return Response.status(200).entity("Hello").build();
+		return Response.status(200).entity("Welcome User...!").build();
 
 
 	}
