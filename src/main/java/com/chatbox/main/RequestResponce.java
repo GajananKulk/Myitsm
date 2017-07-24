@@ -53,6 +53,7 @@ public class RequestResponce {
 		String stime=p.getStarttime();
 		String etime=p.getEndtime();
 		String bookby=p.getUsername();
+		String str1 ="";
 		/*p.setStarttime(null);
 		p.setEndtime(null);
 		
