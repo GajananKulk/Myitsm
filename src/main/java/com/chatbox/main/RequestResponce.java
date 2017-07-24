@@ -19,7 +19,7 @@ import com.chatbox.model.Result;
 import com.chatbox.model.Messages;
 import com.chatbox.model.Fulfillment;
 
-@Path("bookroom")
+@Path("recruiter")
 public class RequestResponce {
 
 	@GET
