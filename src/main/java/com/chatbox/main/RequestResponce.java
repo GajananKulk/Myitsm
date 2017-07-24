@@ -53,8 +53,6 @@ public class RequestResponce {
 		String stime=p.getStarttime();
 		String etime=p.getEndtime();
 		String bookby=p.getUsername();
-		RoomBooking rb=new RoomBooking();
-		String str1 =rb.roomBooking(date, stime, etime, bookby, cap);
 		/*p.setStarttime(null);
 		p.setEndtime(null);
 		
