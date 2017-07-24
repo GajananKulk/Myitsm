@@ -13,9 +13,11 @@ import org.codehaus.jackson.map.ObjectMapper;
 
 import com.chatbox.bussiness.*;
 import com.chatbox.model.API_AI_Response_Mdl;
+import com.chatbox.model.Country;
 import com.chatbox.model.Parameters;
 import com.chatbox.model.Response_Mdl;
 import com.chatbox.model.Result;
+import com.chatbox.model.State;
 import com.chatbox.model.Messages;
 import com.chatbox.model.Fulfillment;
 
@@ -46,14 +48,17 @@ public class RequestResponce {
 		Parameters params=rs.getParameters();
 
 		Parameters p=rs.getParameters();
-		String post=p.getPost();
-		String degree=p.getDegree();
-		String experience=p.getExperience();
-		String tool=p.getTool();
+		String region=p.getRegion();
+		
+		Country country_obj =p.getCountry();
+		String country=country_obj.getCountry();
+		State st=p.getState();
+		String state=st.getState();
+		String category=p.getJob_category();
 		
 		CheckCriterea cc=new CheckCriterea();
 	    
-		String str1 =cc.checkCriterea(post, degree, experience, tool);
+		String str1 =cc.checkCriterea(region, country, state, category);
 		/*p.setStarttime(null);
 		p.setEndtime(null);
 		

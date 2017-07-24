@@ -13,8 +13,80 @@ import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.DateUtil;
 public class CheckCriterea {
 	public String checkCriterea(String post, String degree, String experience,String tool) throws IOException{
-		String result= "";
-		if(degree.toUpperCase() == "BE" || degree.toUpperCase()=="B.Teck" || degree.toUpperCase()=="ME" || degree.toUpperCase()=="M.Teck" || degree.toUpperCase()=="MCA"){
+			String Excel_region= "";
+			String Excel_country="";
+			String Excel_state ="";
+			String Excel_category="";
+			String result="";
+			String Excel_List="";
+			HSSFWorkbook wb=null;
+			boolean flag = false;
+			//FileInputStream stream=null;
+			HSSFRow row = null;
+			//InputStream stream =null;
+			InputStream stream = RoomBooking.class.getResourceAsStream("ConferenceRoomBooking.xls");
+			try
+			{
+				/*File excel = new File("D:\\FlexRecruiter.xls");
+				stream = new FileInputStream(excel);*/
+				//stream = ConferenceRoomBooking.class.getResourceAsStream("D:\\ConferenceRoomBooking.xls");
+				wb = new HSSFWorkbook(stream);
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+
+			HSSFSheet ws = wb.getSheetAt(0);
+			int rowNum = ws.getLastRowNum();
+			int colNum = ws.getRow(1).getLastCellNum();
+			int regionHeaderIndex = -1, countryHeaderIndex = -1,stateHeaderIndex=0, categoryHeaderIndex =0, listHeaderIndex=0;
+			HSSFRow rowHeader = ws.getRow(0);
+
+			for (int j = 0; j < colNum; j++)
+			{
+				HSSFCell cell = rowHeader.getCell(j);
+				String cellValue = cellToString(cell);
+
+				if ("Region".equalsIgnoreCase(cellValue))
+				{
+					regionHeaderIndex = j;
+					System.out.println("Region index="+j);
+				} else if ("Country".equalsIgnoreCase(cellValue))
+				{
+					countryHeaderIndex = j;
+					System.out.println("Country Index="+j);
+				} else if ("State".equalsIgnoreCase(cellValue))
+				{
+					stateHeaderIndex = j;
+					System.out.println("State Index="+j);
+				} else if ("Category".equalsIgnoreCase(cellValue))
+				{
+					categoryHeaderIndex = j;
+					System.out.println("Category Index="+j);
+				}else if ("List".equalsIgnoreCase(cellValue))
+				{
+					listHeaderIndex = j;
+					System.out.println("List Index="+j);
+				}
+			}  
+
+			for (int i = 1; i <=rowNum; i++)
+			{
+				row = ws.getRow(i);
+				Excel_region = cellToString(row.getCell(regionHeaderIndex));
+				Excel_country= cellToString(row.getCell(countryHeaderIndex));
+				Excel_state =cellToString(row.getCell(stateHeaderIndex));
+				Excel_category =cellToString(row.getCell(categoryHeaderIndex));
+				if(Excel_region.equals(region) && Excel_country.equals(country) && Excel_state.equals(state) && Excel_category.equals(category))
+				{
+					Excel_List = cellToString(row.getCell(listHeaderIndex));
+					result =Excel_List;
+				}
+			}
+
+			return result;
+		}
+		
+		/*if(degree.toUpperCase() == "BE" || degree.toUpperCase()=="B.Teck" || degree.toUpperCase()=="ME" || degree.toUpperCase()=="M.Teck" || degree.toUpperCase()=="MCA"){
 			int t=Integer.parseInt(experience);
 			if(t >= 3 && t <=5){
 				if(tool.toUpperCase() == "PPAP"  || tool.toUpperCase() == "PFMEA" || tool.toUpperCase() == "CP" || tool.toUpperCase() == "8D" || tool.toUpperCase() == "ISHIKAWA")
@@ -32,11 +104,11 @@ public class CheckCriterea {
 		}else{
 
 			result="Sorry..! You are not eligible for this post. Bachelor Degree is compulsory.";
-		}
+		}*/
 
 		return result;
 	}
-	public static String send(String post)throws IOException
+	/*public static String send(String post)throws IOException
 	{
 		String excel_post= "";
 		String result="";
@@ -48,8 +120,8 @@ public class CheckCriterea {
 		InputStream stream = CheckCriterea.class.getResourceAsStream("FlexRecruiterData.xls");
 		try
 		{
-			/*File excel = new File("D:\\FlexRecruiterData.xls");
-			stream = new FileInputStream(excel);*/
+			File excel = new File("D:\\FlexRecruiterData.xls");
+			stream = new FileInputStream(excel);
 			//stream = ConferenceRoomBooking.class.getResourceAsStream("D:\\ConferenceRoomBooking.xls");
 			wb = new HSSFWorkbook(stream);
 		}catch(Exception e){
@@ -97,7 +169,7 @@ public class CheckCriterea {
 
 		return result;
 	}
-
+*/
 	public static String cellToString(HSSFCell cell) {
 		int type;
 		Object result = null;
