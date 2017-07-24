@@ -46,13 +46,7 @@ public class RequestResponce {
 		Parameters params=rs.getParameters();
 
 		Parameters p=rs.getParameters();
-		String cap=p.getParticipants();
-		//int capn=Integer.valueOf((String)p.getNoofparticipant());
-		//int capn=Integer.parseInt(cap);
-		String date=p.getDate();
-		String stime=p.getStarttime();
-		String etime=p.getEndtime();
-		String bookby=p.getUsername();
+		
 		String str1 ="";
 		/*p.setStarttime(null);
 		p.setEndtime(null);
