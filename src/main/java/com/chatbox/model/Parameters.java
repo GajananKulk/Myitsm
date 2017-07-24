@@ -4,69 +4,81 @@ package com.chatbox.model;
 
 //@JsonIgnoreProperties(ignoreUnknown = true)
 public class Parameters {
-	private String endtime;
+	 private String region;
 
-    private String username;
+	    private String fullparttime;
 
-    private String starttime;
+	    private String jobtype;
 
-    private String date;
+	    private State state;
 
-    private String participants;
+	    private String jobcategory;
 
-    public String getEndtime ()
-    {
-        return endtime;
-    }
+	    private Country country;
 
-    public void setEndtime (String endtime)
-    {
-        this.endtime = endtime;
-    }
+	    public String getRegion ()
+	    {
+	        return region;
+	    }
 
-    public String getUsername ()
-    {
-        return username;
-    }
+	    public void setRegion (String region)
+	    {
+	        this.region = region;
+	    }
 
-    public void setUsername (String username)
-    {
-        this.username = username;
-    }
+	    public String getFullparttime ()
+	    {
+	        return fullparttime;
+	    }
 
-    public String getStarttime ()
-    {
-        return starttime;
-    }
+	    public void setFullparttime (String fullparttime)
+	    {
+	        this.fullparttime = fullparttime;
+	    }
 
-    public void setStarttime (String starttime)
-    {
-        this.starttime = starttime;
-    }
+	    public String getJobtype ()
+	    {
+	        return jobtype;
+	    }
 
-    public String getDate ()
-    {
-        return date;
-    }
+	    public void setJobtype (String jobtype)
+	    {
+	        this.jobtype = jobtype;
+	    }
 
-    public void setDate (String date)
-    {
-        this.date = date;
-    }
+	    public State getState ()
+	    {
+	        return state;
+	    }
 
-    public String getParticipants ()
-    {
-        return participants;
-    }
+	    public void setState (State state)
+	    {
+	        this.state = state;
+	    }
 
-    public void setParticipants (String participants)
-    {
-        this.participants = participants;
-    }
+	    public String getJobcategory ()
+	    {
+	        return jobcategory;
+	    }
 
-    @Override
-    public String toString()
-    {
-        return "ClassPojo [endtime = "+endtime+", username = "+username+", starttime = "+starttime+", date = "+date+", participants = "+participants+"]";
-    }
+	    public void setJobcategory (String jobcategory)
+	    {
+	        this.jobcategory = jobcategory;
+	    }
+
+	    public Country getCountry ()
+	    {
+	        return country;
+	    }
+
+	    public void setCountry (Country country)
+	    {
+	        this.country = country;
+	    }
+
+	    @Override
+	    public String toString()
+	    {
+	        return "ClassPojo [region = "+region+", fullparttime = "+fullparttime+", jobtype = "+jobtype+", state = "+state+", jobcategory = "+jobcategory+", country = "+country+"]";
+	    }
 }
