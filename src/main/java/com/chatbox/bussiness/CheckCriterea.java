@@ -24,7 +24,7 @@ public class CheckCriterea {
 			//FileInputStream stream=null;
 			HSSFRow row = null;
 			//InputStream stream =null;
-			InputStream stream = CheckCriterea.class.getResourceAsStream("ConferenceRoomBooking.xls");
+			InputStream stream = CheckCriterea.class.getResourceAsStream("FlexRecruiter.xls");
 			try
 			{
 				/*File excel = new File("D:\\FlexRecruiter.xls");
