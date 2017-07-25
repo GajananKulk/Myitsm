@@ -8,7 +8,7 @@ public class Parameters {
 
     private String job_category;
 
-    private String Region;
+    private String region;
 
     private String state;
 
@@ -38,12 +38,12 @@ public class Parameters {
 
     public String getRegion ()
     {
-        return Region;
+        return region;
     }
 
     public void setRegion (String Region)
     {
-        this.Region = Region;
+        this.region = Region;
     }
 
     public String getState ()
@@ -79,6 +79,6 @@ public class Parameters {
     @Override
     public String toString()
     {
-        return "ClassPojo [skills = "+skills+", job_category = "+job_category+", Region = "+Region+", state = "+state+", experience = "+experience+", country = "+country+"]";
+        return "ClassPojo [skills = "+skills+", job_category = "+job_category+", Region = "+region+", state = "+state+", experience = "+experience+", country = "+country+"]";
     }
 }
