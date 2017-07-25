@@ -41,9 +41,9 @@ public class Parameters {
         return region;
     }
 
-    public void setRegion (String Region)
+    public void setRegion (String region)
     {
-        this.region = Region;
+        this.region = region;
     }
 
     public String getState ()
