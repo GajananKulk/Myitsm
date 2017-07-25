@@ -83,12 +83,12 @@ public class Result
         this.resolvedQuery = resolvedQuery;
     }
 
-    public String[] getContexts ()
+    public Contexts[] getContexts ()
     {
         return contexts;
     }
 
-    public void setContexts (String[] contexts)
+    public void setContexts (Contexts[] contexts)
     {
         this.contexts = contexts;
     }
