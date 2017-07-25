@@ -82,7 +82,7 @@ public class CheckCriterea {
 				{
 					Excel_List = cellToString(row.getCell(listHeaderIndex));
 					
-					result =Excel_List;
+					result ="Following are the opening for "+category+" :" +Excel_List;
 					System.out.println("List op opening :-"+ result);
 				}
 			}
