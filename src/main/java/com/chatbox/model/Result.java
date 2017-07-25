@@ -17,7 +17,7 @@ public class Result
 
     private String resolvedQuery;
 
-    private String[] contexts;
+    private Contexts[] contexts;
 
     private Parameters parameters;
 

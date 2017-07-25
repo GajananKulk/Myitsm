@@ -49,11 +49,8 @@ public class RequestResponce {
 
 		Parameters p=rs.getParameters();
 		String region=p.getRegion();
-		
-		Country country_obj =p.getCountry();
-		String country=country_obj.getCountry();
-		State st=p.getState();
-		String state=st.getState();
+		String country=p.getCountry();
+		String state=p.getState();
 		String category=p.getJob_category();
 		
 		CheckCriterea cc=new CheckCriterea();

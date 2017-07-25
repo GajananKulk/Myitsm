@@ -3,7 +3,7 @@ package com.chatbox.model;
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Context {
+public class Contexts {
 	private String name;
 	private String lifespan;
 	private Parameters parameters;

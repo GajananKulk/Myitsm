@@ -4,44 +4,26 @@ import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Parameters {
-	private String region;
-
-    private String fullparttime;
+	private String skills;
 
     private String job_category;
 
-    private String post;
+    private String Region;
 
-    private String jobtype;
-
-    private String degree;
-
-    private String tool;
-
-    private State state;
+    private String state;
 
     private String experience;
 
-    private Country country;
+    private String country;
 
-    public String getRegion ()
+    public String getSkills ()
     {
-        return region;
+        return skills;
     }
 
-    public void setRegion (String region)
+    public void setSkills (String skills)
     {
-        this.region = region;
-    }
-
-    public String getFullparttime ()
-    {
-        return fullparttime;
-    }
-
-    public void setFullparttime (String fullparttime)
-    {
-        this.fullparttime = fullparttime;
+        this.skills = skills;
     }
 
     public String getJob_category ()
@@ -54,52 +36,22 @@ public class Parameters {
         this.job_category = job_category;
     }
 
-    public String getPost ()
+    public String getRegion ()
     {
-        return post;
+        return Region;
     }
 
-    public void setPost (String post)
+    public void setRegion (String Region)
     {
-        this.post = post;
+        this.Region = Region;
     }
 
-    public String getJobtype ()
-    {
-        return jobtype;
-    }
-
-    public void setJobtype (String jobtype)
-    {
-        this.jobtype = jobtype;
-    }
-
-    public String getDegree ()
-    {
-        return degree;
-    }
-
-    public void setDegree (String degree)
-    {
-        this.degree = degree;
-    }
-
-    public String getTool ()
-    {
-        return tool;
-    }
-
-    public void setTool (String tool)
-    {
-        this.tool = tool;
-    }
-
-    public State getState ()
+    public String getState ()
     {
         return state;
     }
 
-    public void setState (State state)
+    public void setState (String state)
     {
         this.state = state;
     }
@@ -114,12 +66,12 @@ public class Parameters {
         this.experience = experience;
     }
 
-    public Country getCountry ()
+    public String getCountry ()
     {
         return country;
     }
 
-    public void setCountry (Country country)
+    public void setCountry (String country)
     {
         this.country = country;
     }
@@ -127,6 +79,6 @@ public class Parameters {
     @Override
     public String toString()
     {
-        return "ClassPojo [region = "+region+", fullparttime = "+fullparttime+", job_category = "+job_category+", post = "+post+", jobtype = "+jobtype+", degree = "+degree+", tool = "+tool+", state = "+state+", experience = "+experience+", country = "+country+"]";
+        return "ClassPojo [skills = "+skills+", job_category = "+job_category+", Region = "+Region+", state = "+state+", experience = "+experience+", country = "+country+"]";
     }
 }
