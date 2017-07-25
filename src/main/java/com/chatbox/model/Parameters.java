@@ -1,8 +1,8 @@
 package com.chatbox.model;
 
-import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+/*import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 
-@JsonIgnoreProperties(ignoreUnknown = true)
+@JsonIgnoreProperties(ignoreUnknown = true)*/
 public class Parameters {
 	private String skills;
 

@@ -76,7 +76,7 @@ public class CheckCriterea {
 				Excel_country= cellToString(row.getCell(countryHeaderIndex));
 				Excel_state =cellToString(row.getCell(stateHeaderIndex));
 				Excel_category =cellToString(row.getCell(categoryHeaderIndex));
-				if(Excel_region.equals(region) && Excel_country.equals(country) && Excel_state.equals(state) && Excel_category.equals(category))
+				if(Excel_region.equalsIgnoreCase(region) && Excel_country.equalsIgnoreCase(country) && Excel_state.equalsIgnoreCase(state) && Excel_category.equalsIgnoreCase(category))
 				{
 					Excel_List = cellToString(row.getCell(listHeaderIndex));
 					
