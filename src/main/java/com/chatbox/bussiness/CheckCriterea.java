@@ -69,6 +69,7 @@ public class CheckCriterea {
 				}
 			}  
 
+			System.out.println("Region="+region+" Country="+ country +" State="+state+" Jab Category="+category);
 			for (int i = 1; i <=rowNum; i++)
 			{
 				row = ws.getRow(i);
@@ -76,6 +77,7 @@ public class CheckCriterea {
 				Excel_country= cellToString(row.getCell(countryHeaderIndex));
 				Excel_state =cellToString(row.getCell(stateHeaderIndex));
 				Excel_category =cellToString(row.getCell(categoryHeaderIndex));
+				
 				if(Excel_region.equalsIgnoreCase(region) && Excel_country.equalsIgnoreCase(country) && Excel_state.equalsIgnoreCase(state) && Excel_category.equalsIgnoreCase(category))
 				{
 					Excel_List = cellToString(row.getCell(listHeaderIndex));
